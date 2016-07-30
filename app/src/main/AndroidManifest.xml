@@ -18,7 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TableActivity"></activity>
+        <activity android:name=".TableActivity" />
+        <activity android:name=".Teams.Team1" />
+        <activity android:name=".Teams.Team2" />
+        <activity android:name=".Teams.Team3" />
+        <activity android:name=".Teams.Team4" />
+        <activity android:name=".Teams.Team5" />
+        <activity android:name=".Teams.Team6" />
+        <activity android:name=".Teams.Team7" />
+        <activity android:name=".Teams.Team8" />
+        <activity android:name=".Teams.Team9" />
+        <activity android:name=".Teams.Team10"></activity>
     </application>
 
 </manifest>

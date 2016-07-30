@@ -35,12 +35,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 
+import com.fop.anjal.footballourpassion.Teams.Team1;
+import com.fop.anjal.footballourpassion.Teams.Team10;
+import com.fop.anjal.footballourpassion.Teams.Team2;
+import com.fop.anjal.footballourpassion.Teams.Team3;
+import com.fop.anjal.footballourpassion.Teams.Team4;
+import com.fop.anjal.footballourpassion.Teams.Team5;
+import com.fop.anjal.footballourpassion.Teams.Team6;
+import com.fop.anjal.footballourpassion.Teams.Team7;
+import com.fop.anjal.footballourpassion.Teams.Team8;
+import com.fop.anjal.footballourpassion.Teams.Team9;
+
 
 public class LeagueActivity extends AppCompatActivity{
 
     ArrayList<Players> PlayerList = new ArrayList<Players>();
-    ImageView button;
-    int j=0;
+    Button button;
+    Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
+    int j=0,p=2;
     private ProgressBar spinner;
     Context context;
 
@@ -48,7 +60,17 @@ public class LeagueActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_league);
-        button = (ImageView) findViewById(R.id.button);
+        button = (Button) findViewById(R.id.button);
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
+        button3 = (Button) findViewById(R.id.button3);
+        button4 = (Button) findViewById(R.id.button4);
+        button5 = (Button) findViewById(R.id.button5);
+        button6 = (Button) findViewById(R.id.button6);
+        button7 = (Button) findViewById(R.id.button7);
+        button8 = (Button) findViewById(R.id.button8);
+        button9 = (Button) findViewById(R.id.button9);
+        button10 = (Button) findViewById(R.id.button10);
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
         spinner.setVisibility(View.VISIBLE);
         // get reference to the views
@@ -56,12 +78,110 @@ public class LeagueActivity extends AppCompatActivity{
 
         // call AsynTask to perform network operation on separate thread
         new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page=1&ls-page=1");
-        new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page=2&ls-page=2");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, TableActivity.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team1.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+                startActivity(intent);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team2.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team3.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team4.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team5.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team6.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team7.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team8.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team9.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
+
+                startActivity(intent);
+            }
+        });
+
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Team10.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
 
                 startActivity(intent);
@@ -121,6 +241,16 @@ public class LeagueActivity extends AppCompatActivity{
             if(j==2){
                 Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_LONG).show();
                 button.setVisibility(View.VISIBLE);
+                button1.setVisibility(View.VISIBLE);
+                button2.setVisibility(View.VISIBLE);
+                button3.setVisibility(View.VISIBLE);
+                button4.setVisibility(View.VISIBLE);
+                button5.setVisibility(View.VISIBLE);
+                button6.setVisibility(View.VISIBLE);
+                button7.setVisibility(View.VISIBLE);
+                button8.setVisibility(View.VISIBLE);
+                button9.setVisibility(View.VISIBLE);
+                button10.setVisibility(View.VISIBLE);
                 spinner.setVisibility(View.GONE);
             }
 
@@ -130,6 +260,12 @@ public class LeagueActivity extends AppCompatActivity{
                 JSONObject jsonRootObject = new JSONObject(result);
 
                 JSONObject JSONnew_entries  = jsonRootObject.getJSONObject("new_entries");
+
+//                JSONObject jSON_has_next =JSONnew_entries.getJSONObject("has_next");
+
+                Log.d("ASDF",JSONnew_entries.getString("has_next"));
+
+
                 JSONArray jsonResults = JSONnew_entries.optJSONArray("results");
 
                 for (int i = 0; i < jsonResults.length(); i++) {
@@ -147,6 +283,11 @@ public class LeagueActivity extends AppCompatActivity{
 
                     PlayerList.add(player);
 
+                }
+                if((JSONnew_entries.getString("has_next")).equals("true")) {
+
+                    new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page="+String.valueOf(p)+"&ls-page="+String.valueOf(p));
+                    p++;
                 }
             }
             catch (JSONException e)
