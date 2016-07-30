@@ -27,10 +27,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
@@ -50,8 +50,9 @@ import com.fop.anjal.footballourpassion.Teams.Team9;
 public class LeagueActivity extends AppCompatActivity{
 
     ArrayList<Players> PlayerList = new ArrayList<Players>();
-    Button button;
-    Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
+    ImageView button;
+    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
+    RelativeLayout bg;
     int j=0,p=2;
     private ProgressBar spinner;
     Context context;
@@ -60,17 +61,18 @@ public class LeagueActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_league);
-        button = (Button) findViewById(R.id.button);
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
-        button5 = (Button) findViewById(R.id.button5);
-        button6 = (Button) findViewById(R.id.button6);
-        button7 = (Button) findViewById(R.id.button7);
-        button8 = (Button) findViewById(R.id.button8);
-        button9 = (Button) findViewById(R.id.button9);
-        button10 = (Button) findViewById(R.id.button10);
+        bg = (RelativeLayout) findViewById(R.id.bg);
+        button = (ImageView) findViewById(R.id.button);
+        button1 = (ImageView) findViewById(R.id.button1);
+        button2 = (ImageView) findViewById(R.id.button2);
+        button3 = (ImageView) findViewById(R.id.button3);
+        button4 = (ImageView) findViewById(R.id.button4);
+        button5 = (ImageView) findViewById(R.id.button5);
+        button6 = (ImageView) findViewById(R.id.button6);
+        button7 = (ImageView) findViewById(R.id.button7);
+        button8 = (ImageView) findViewById(R.id.button8);
+        button9 = (ImageView) findViewById(R.id.button9);
+        button10 = (ImageView) findViewById(R.id.button10);
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
         spinner.setVisibility(View.VISIBLE);
         // get reference to the views
@@ -239,6 +241,7 @@ public class LeagueActivity extends AppCompatActivity{
         protected void onPostExecute(String result) {
             j++;
             if(j==2){
+                bg.setBackgroundResource(R.drawable.cl);
                 Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_LONG).show();
                 button.setVisibility(View.VISIBLE);
                 button1.setVisibility(View.VISIBLE);

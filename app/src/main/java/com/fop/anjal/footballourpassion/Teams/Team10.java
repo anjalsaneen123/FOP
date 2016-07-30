@@ -42,7 +42,7 @@ public class Team10 extends AppCompatActivity {
 
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("811")){
+            if((PlayersList.get(i).getEntry()).equals("133834")){
                 name1.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score1.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -51,7 +51,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("823")){
+            if((PlayersList.get(i).getEntry()).equals("47810")){
                 name2.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score2.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -60,7 +60,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("218915")){
+            if((PlayersList.get(i).getEntry()).equals("6480")){
                 name3.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score3.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -69,7 +69,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("811")){
+            if((PlayersList.get(i).getEntry()).equals("105706")){
                 name4.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score4.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -78,7 +78,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("205743")){
+            if((PlayersList.get(i).getEntry()).equals("102")){
                 name5.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score5.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -87,7 +87,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("228411")){
+            if((PlayersList.get(i).getEntry()).equals("6480")){
                 name6.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score6.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
@@ -96,7 +96,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("811")){
+            if((PlayersList.get(i).getEntry()).equals("171201")){
                 name7.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score7.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
