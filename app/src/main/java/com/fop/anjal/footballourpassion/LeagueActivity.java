@@ -242,7 +242,7 @@ public class LeagueActivity extends AppCompatActivity{
             j++;
             if(j==2){
                 bg.setBackgroundResource(R.drawable.cl);
-                Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_SHORT).show();
                 button.setVisibility(View.VISIBLE);
                 button1.setVisibility(View.VISIBLE);
                 button2.setVisibility(View.VISIBLE);

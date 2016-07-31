@@ -28,7 +28,19 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp"
+                android:id="@+id/a1"/>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp"
+                android:id="@+id/b1"/>
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name1"
                 android:layout_height="wrap_content"
@@ -47,7 +59,19 @@
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/a2"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b2"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name2"
                 android:layout_height="wrap_content"
@@ -62,11 +86,24 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="35dp"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a3"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b3"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name3"
                 android:layout_height="wrap_content"
@@ -81,16 +118,29 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="45dp"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a4"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b4"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name4"
                 android:layout_height="wrap_content"
                 android:text="nulls"
-                android:textSize="15dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,11 +150,24 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="45dp"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a5"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b5"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name5"
                 android:layout_height="wrap_content"
@@ -123,12 +186,25 @@
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a6"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b6"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name6"
                 android:layout_height="wrap_content"
                 android:text="nulls"
-                android:textSize="15dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,7 +218,20 @@
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/a7"
+                android:layout_width="25dp"
+                android:src="@drawable/green"
+                android:layout_height="25dp" />
+            <ImageView
+                android:id="@+id/b7"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:src="@drawable/red_boarder"
+                android:layout_height="25dp" />
             <TextView
+                android:layout_marginLeft="10dp"
                 android:layout_width="200dp"
                 android:id="@+id/name7"
                 android:layout_height="wrap_content"
