@@ -71,7 +71,7 @@
                 android:id="@+id/name3"
                 android:layout_height="wrap_content"
                 android:text="nulls"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

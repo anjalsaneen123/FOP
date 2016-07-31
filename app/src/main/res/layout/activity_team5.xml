@@ -33,7 +33,7 @@
                 android:id="@+id/name1"
                 android:layout_height="wrap_content"
                 android:text="null"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                 android:id="@+id/name2"
                 android:layout_height="wrap_content"
                 android:text="null"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                 android:id="@+id/name4"
                 android:layout_height="wrap_content"
                 android:text="nulls"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                 android:id="@+id/name5"
                 android:layout_height="wrap_content"
                 android:text="nulls"
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
