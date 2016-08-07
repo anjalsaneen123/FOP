@@ -28,7 +28,8 @@
         <activity android:name=".Teams.Team7" />
         <activity android:name=".Teams.Team8" />
         <activity android:name=".Teams.Team9" />
-        <activity android:name=".Teams.Team10"></activity>
+        <activity android:name=".Teams.Team10" />
+        <activity android:name=".FixtureActivity"></activity>
     </application>
 
 </manifest>

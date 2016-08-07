@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -51,7 +52,7 @@ public class LeagueActivity extends AppCompatActivity{
 
     ArrayList<Players> PlayerList = new ArrayList<Players>();
     ImageView button;
-    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
+    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link;
     RelativeLayout bg;
     int j=0,p=2;
     private ProgressBar spinner;
@@ -73,6 +74,8 @@ public class LeagueActivity extends AppCompatActivity{
         button8 = (ImageView) findViewById(R.id.button8);
         button9 = (ImageView) findViewById(R.id.button9);
         button10 = (ImageView) findViewById(R.id.button10);
+        link = (ImageView) findViewById(R.id.link);
+        fixture = (ImageView) findViewById(R.id.fixture);
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
         spinner.setVisibility(View.VISIBLE);
         // get reference to the views
@@ -190,6 +193,21 @@ public class LeagueActivity extends AppCompatActivity{
             }
         });
 
+        fixture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, FixtureActivity.class);
+                startActivity(intent);
+            }
+        });
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fantasy.premierleague.com/a/leagues/standings/569/classic"));
+                startActivity(myIntent);
+            }
+        });
+
     }
 
     public static String GET(String url){
@@ -254,6 +272,7 @@ public class LeagueActivity extends AppCompatActivity{
                 button8.setVisibility(View.VISIBLE);
                 button9.setVisibility(View.VISIBLE);
                 button10.setVisibility(View.VISIBLE);
+                fixture.setVisibility(View.VISIBLE);
                 spinner.setVisibility(View.GONE);
             }
 
