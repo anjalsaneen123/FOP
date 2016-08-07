@@ -168,7 +168,7 @@
                 android:layout_marginLeft="32dp"
                 android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:background="@drawable/a11"
+                android:background="@drawable/fixture"
                 android:visibility="gone"
                 />
 
