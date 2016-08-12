@@ -116,7 +116,7 @@ public class Team10 extends AppCompatActivity {
         }
         for(int i=0;i<PlayersList.size();i++)
         {
-            if((PlayersList.get(i).getEntry()).equals("171201")){
+            if((PlayersList.get(i).getEntry()).equals("62002")){
                 name7.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
                 score7.setText(PlayersList.get(i).getEntry());
                 total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());

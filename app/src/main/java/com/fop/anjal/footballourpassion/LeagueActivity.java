@@ -52,7 +52,7 @@ public class LeagueActivity extends AppCompatActivity{
 
     ArrayList<Players> PlayerList = new ArrayList<Players>();
     ImageView button;
-    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link;
+    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link,tml;
     RelativeLayout bg;
     int j=0,p=2;
     private ProgressBar spinner;
@@ -75,6 +75,7 @@ public class LeagueActivity extends AppCompatActivity{
         button9 = (ImageView) findViewById(R.id.button9);
         button10 = (ImageView) findViewById(R.id.button10);
         link = (ImageView) findViewById(R.id.link);
+        tml = (ImageView) findViewById(R.id.tml);
         fixture = (ImageView) findViewById(R.id.fixture);
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
         spinner.setVisibility(View.VISIBLE);
@@ -200,6 +201,14 @@ public class LeagueActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        tml.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LeagueActivity.this, Tml.class);
+                startActivity(intent);
+            }
+        });
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -273,6 +282,7 @@ public class LeagueActivity extends AppCompatActivity{
                 button9.setVisibility(View.VISIBLE);
                 button10.setVisibility(View.VISIBLE);
                 fixture.setVisibility(View.VISIBLE);
+                tml.setVisibility(View.VISIBLE);
                 spinner.setVisibility(View.GONE);
             }
 
