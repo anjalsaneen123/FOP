@@ -63,63 +63,63 @@ public class Team7 extends AppCompatActivity {
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("52439")){
-                name1.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score1.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name1.setText((PlayersList.get(i).getPlayer_name()));
+                score1.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("111640")){
-                name2.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score2.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name2.setText((PlayersList.get(i).getPlayer_name()));
+                score2.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("167014")){
-                name3.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score3.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name3.setText((PlayersList.get(i).getPlayer_name()));
+                score3.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("275735")){
-                name4.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score4.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name4.setText((PlayersList.get(i).getPlayer_name()));
+                score4.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("195304")){
-                name5.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score5.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name5.setText((PlayersList.get(i).getPlayer_name()));
+                score5.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("959")){
-                name6.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score6.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name6.setText((PlayersList.get(i).getPlayer_name()));
+                score6.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("4375")){
-                name7.setText((PlayersList.get(i).getPlayer_first_name())+" "+(PlayersList.get(i).getPlayer_last_name()));
-                score7.setText(PlayersList.get(i).getEntry());
-                total_score=total_score+Integer.parseInt(PlayersList.get(i).getEntry());
+                name7.setText((PlayersList.get(i).getPlayer_name()));
+                score7.setText(PlayersList.get(i).getGw_score());
+                total_score=total_score+Integer.parseInt(PlayersList.get(i).getGw_score());
                 break;
             }
         }

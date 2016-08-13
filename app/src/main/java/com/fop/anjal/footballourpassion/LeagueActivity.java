@@ -266,32 +266,13 @@ public class LeagueActivity extends AppCompatActivity{
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            j++;
-            if(j==2){
-                bg.setBackgroundResource(R.drawable.cl);
-                Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_SHORT).show();
-                button.setVisibility(View.VISIBLE);
-                button1.setVisibility(View.VISIBLE);
-                button2.setVisibility(View.VISIBLE);
-                button3.setVisibility(View.VISIBLE);
-                button4.setVisibility(View.VISIBLE);
-                button5.setVisibility(View.VISIBLE);
-                button6.setVisibility(View.VISIBLE);
-                button7.setVisibility(View.VISIBLE);
-                button8.setVisibility(View.VISIBLE);
-                button9.setVisibility(View.VISIBLE);
-                button10.setVisibility(View.VISIBLE);
-                fixture.setVisibility(View.VISIBLE);
-                tml.setVisibility(View.VISIBLE);
-                spinner.setVisibility(View.GONE);
-            }
 
 //            Log.d("RESULT:",result);
             try
             {
                 JSONObject jsonRootObject = new JSONObject(result);
 
-                JSONObject JSONnew_entries  = jsonRootObject.getJSONObject("new_entries");
+                JSONObject JSONnew_entries  = jsonRootObject.getJSONObject("standings");
 
 //                JSONObject jSON_has_next =JSONnew_entries.getJSONObject("has_next");
 
@@ -307,19 +288,39 @@ public class LeagueActivity extends AppCompatActivity{
 
                     player.setEntry_name(object.getString("entry_name"));
                     player.setId(object.getString("id"));
-                    player.setPlayer_first_name(object.getString("player_first_name"));
-                    Log.d(String.valueOf(i),player.getPlayer_first_name());
-                    player.setPlayer_last_name(object.getString("player_last_name"));
+                    player.setPlayer_name(object.getString("player_name"));
+
+                    Log.d(String.valueOf(i),player.getPlayer_name());
+
                     player.setEntry(object.getString("entry"));
-                    player.setJoined_time(object.getString("joined_time"));
+                    player.setRank(object.getString("rank_sort"));
+                    player.setGw_score(object.getString("event_total"));
 
                     PlayerList.add(player);
 
                 }
                 if((JSONnew_entries.getString("has_next")).equals("true")) {
-
                     new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page="+String.valueOf(p)+"&ls-page="+String.valueOf(p));
                     p++;
+                }
+                else
+                {
+                    bg.setBackgroundResource(R.drawable.cl);
+                    Toast.makeText(getBaseContext(), " Data Received!", Toast.LENGTH_SHORT).show();
+                    button.setVisibility(View.VISIBLE);
+                    button1.setVisibility(View.VISIBLE);
+                    button2.setVisibility(View.VISIBLE);
+                    button3.setVisibility(View.VISIBLE);
+                    button4.setVisibility(View.VISIBLE);
+                    button5.setVisibility(View.VISIBLE);
+                    button6.setVisibility(View.VISIBLE);
+                    button7.setVisibility(View.VISIBLE);
+                    button8.setVisibility(View.VISIBLE);
+                    button9.setVisibility(View.VISIBLE);
+                    button10.setVisibility(View.VISIBLE);
+                    fixture.setVisibility(View.VISIBLE);
+                    tml.setVisibility(View.GONE);
+                    spinner.setVisibility(View.GONE);
                 }
             }
             catch (JSONException e)

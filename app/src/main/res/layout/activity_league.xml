@@ -12,7 +12,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/link"
-        android:src="@android:drawable/ic_menu_add"
+        android:src="@android:drawable/ic_menu_set_as"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />
 

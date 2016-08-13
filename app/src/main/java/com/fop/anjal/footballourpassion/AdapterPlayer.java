@@ -44,7 +44,7 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
     }
 
     public static class ViewHolder {
-        public TextView name,date,id,team_name;
+        public TextView name,date,id,team_name,rank;
 
     }
 
@@ -58,8 +58,8 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
 
                 holder.team_name = (TextView) vi.findViewById(R.id.team_name);
                 holder.name = (TextView) vi.findViewById(R.id.name);
-                holder.id = (TextView) vi.findViewById(R.id.id);
                 holder.date = (TextView) vi.findViewById(R.id.date);
+                holder.rank = (TextView) vi.findViewById(R.id.rank);
 
 
                 vi.setTag(holder);
@@ -70,9 +70,9 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
 
 
             holder.team_name.setText(lPerson.get(position).getEntry_name());
-            holder.name.setText((lPerson.get(position).getPlayer_first_name())+" "+(lPerson.get(position).getPlayer_last_name()));
-            holder.date.setText(lPerson.get(position).getJoined_time());
-            holder.id.setText(lPerson.get(position).getEntry());
+            holder.name.setText((lPerson.get(position).getPlayer_name()));
+            holder.date.setText(lPerson.get(position).getGw_score());
+            holder.rank.setText(String.valueOf(position+1));
 
         } catch (Exception e) {
 
