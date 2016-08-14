@@ -293,8 +293,10 @@ public class LeagueActivity extends AppCompatActivity{
                     Log.d(String.valueOf(i),player.getPlayer_name());
 
                     player.setEntry(object.getString("entry"));
-                    player.setRank(object.getString("rank_sort"));
+                    player.setRank(object.getString("rank"));
                     player.setGw_score(object.getString("event_total"));
+
+                    player.setTotal_score(object.getString("total"));
 
                     PlayerList.add(player);
 

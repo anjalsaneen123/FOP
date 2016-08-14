@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by anjal on 29-Jul-16.
  */
 public class Players implements Serializable {
-    String id,entry_name,player_name,entry,gw_score,rank;
+    String id,entry_name,player_name,entry,gw_score,rank,total_score;
 
     public Players() {
 
@@ -14,6 +14,14 @@ public class Players implements Serializable {
 
     public String getId() {
         return id;
+    }
+
+    public String getTotal_score() {
+        return total_score;
+    }
+
+    public void setTotal_score(String total_score) {
+        this.total_score = total_score;
     }
 
     public void setId(String id) {
