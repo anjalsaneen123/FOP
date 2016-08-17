@@ -72,8 +72,6 @@ public class Team1 extends AppCompatActivity {
         home = (Button) findViewById(R.id.button1);
         away = (Button) findViewById(R.id.button2);
 
-
-
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals("811")){
@@ -332,8 +330,6 @@ public class Team1 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                     }
                 });
-
-
 
                 total_score=total_score-Integer.parseInt(score1.getText().toString());
                 total.setText(String.valueOf(total_score));

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class Team3 extends AppCompatActivity {
     Button home,away;
     int cap=0;
 
+    RelativeLayout border;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,8 @@ public class Team3 extends AppCompatActivity {
         name5=(TextView) findViewById(R.id.name5);
         name6=(TextView) findViewById(R.id.name6);
         name7=(TextView) findViewById(R.id.name7);
+
+        border = (RelativeLayout)findViewById(R.id.border);
 
         total = (TextView)findViewById(R.id.total);
 
@@ -301,12 +306,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -318,12 +325,11 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
                 });
-
-
 
                 total_score=total_score-Integer.parseInt(score1.getText().toString());
                 total.setText(String.valueOf(total_score));
@@ -347,12 +353,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -364,6 +372,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
@@ -391,12 +400,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -408,6 +419,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
@@ -435,12 +447,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -452,6 +466,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
@@ -479,12 +494,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -496,6 +513,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
@@ -523,12 +541,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -540,6 +560,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }
@@ -567,12 +588,14 @@ public class Team3 extends AppCompatActivity {
 
                 home.setVisibility(View.VISIBLE);
                 away.setVisibility(View.VISIBLE);
+                border.setVisibility(View.VISIBLE);
 
                 home.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
+                        border.setVisibility(View.GONE);
 
                         bottom.setVisibility(View.VISIBLE);
                         total_score=total_score+(Math.round((total_score-cap)/30));
@@ -584,6 +607,7 @@ public class Team3 extends AppCompatActivity {
                 away.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        border.setVisibility(View.GONE);
                         home.setVisibility(View.GONE);
                         away.setVisibility(View.GONE);
                     }

@@ -10,9 +10,21 @@
     android:background="@mipmap/tml1"
     tools:context="com.fop.anjal.footballourpassion.Tml">
 
+    <TextView
+        android:id="@+id/avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Average: "
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
     <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/avg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +41,7 @@
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_centerVertical="true"
-                    android:src="@mipmap/hull"/>
+                    android:src="@mipmap/sun"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -40,7 +52,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hull City"
+                        android:text="Sunderland"
                         android:layout_marginTop="20dp"
                         android:textSize="16dp"
                         android:textStyle="bold"/>
@@ -70,7 +82,7 @@
                             android:id="@+id/t2"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Anjal Saneen" />
+                            android:text="Hudman" />
 
                         <TextView
                             android:id="@+id/s2"
@@ -157,7 +169,7 @@
                             android:id="@+id/t4"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Anjal Saneen" />
+                            android:text="Hudman" />
 
                         <TextView
                             android:id="@+id/s4"
@@ -244,7 +256,7 @@
                             android:id="@+id/t6"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Anjal Saneen" />
+                            android:text="Hudman" />
 
                         <TextView
                             android:id="@+id/s6"
@@ -330,7 +342,7 @@
                             android:id="@+id/t8"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Anjal Saneen" />
+                            android:text="Hudman" />
 
                         <TextView
                             android:id="@+id/s8"
@@ -416,7 +428,7 @@
                             android:id="@+id/t10"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Anjal Saneen" />
+                            android:text="Hudman" />
 
                         <TextView
                             android:id="@+id/s10"
@@ -1414,7 +1426,7 @@
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_centerVertical="true"
-                    android:src="@mipmap/sun"/>
+                    android:src="@mipmap/hull"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -1425,7 +1437,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunderland"
+                        android:text="Hull City"
                         android:layout_marginTop="20dp"
                         android:textSize="16dp"
                         android:textStyle="bold"/>

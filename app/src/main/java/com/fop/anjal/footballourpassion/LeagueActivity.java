@@ -206,6 +206,7 @@ public class LeagueActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Tml.class);
+                intent.putExtra("FILES_TO_SEND", PlayerList);
                 startActivity(intent);
             }
         });
@@ -321,7 +322,7 @@ public class LeagueActivity extends AppCompatActivity{
                     button9.setVisibility(View.VISIBLE);
                     button10.setVisibility(View.VISIBLE);
                     fixture.setVisibility(View.VISIBLE);
-                    tml.setVisibility(View.GONE);
+                    tml.setVisibility(View.VISIBLE);
                     spinner.setVisibility(View.GONE);
                 }
             }
