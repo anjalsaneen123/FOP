@@ -44,7 +44,7 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
     }
 
     public static class ViewHolder {
-        public TextView name,date,id,team_name,rank,total_point;
+        public TextView name,date,id,team_name,rank,total_point,fop;
 
     }
 
@@ -58,6 +58,7 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
 
                 holder.team_name = (TextView) vi.findViewById(R.id.team_name);
                 holder.name = (TextView) vi.findViewById(R.id.name);
+                holder.fop = (TextView) vi.findViewById(R.id.fop_team);
                 holder.date = (TextView) vi.findViewById(R.id.date);
                 holder.rank = (TextView) vi.findViewById(R.id.rank);
                 holder.total_point = (TextView) vi.findViewById(R.id.total_point);
@@ -74,6 +75,104 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
             holder.date.setText(lPerson.get(position).getGw_score());
             holder.rank.setText(lPerson.get(position).getRank());
             holder.total_point.setText(lPerson.get(position).getTotal_score());
+
+            int rr=Integer.parseInt(lPerson.get(position).getEntry());
+
+            if (rr==811
+                    ||rr==76418
+                    ||rr==65975
+                    ||rr==202150
+                    ||rr==5912
+                    ||rr==10598
+                    ||rr==49972){
+                    holder.fop.setText("White wankers");
+            }
+            else if (rr==218915
+                    ||rr==108
+                    ||rr==34815
+                    ||rr==153210
+                    ||rr==26487
+                    ||rr==204558
+                    ||rr==33905){
+                holder.fop.setText("Faceless men");
+            }
+            else if (rr==18848
+                    ||rr==2475
+                    ||rr==258027
+                    ||rr==314710
+                    ||rr==2101
+                    ||rr==169616
+                    ||rr==1488){
+                holder.fop.setText("Targaryrns");
+            }
+            else if (rr==591
+                    ||rr==50973
+                    ||rr==28466
+                    ||rr==77009
+                    ||rr==27006
+                    ||rr==24132
+                    ||rr==21538){
+                holder.fop.setText("Night's Watch");
+            }
+            else if (rr==59795
+                    ||rr==166225
+                    ||rr==7519
+                    ||rr==57414
+                    ||rr==4183
+                    ||rr==12066
+                    ||rr==8167){
+                holder.fop.setText("Starks");
+            }
+            else if (rr==779
+                    ||rr==326
+                    ||rr==140848
+                    ||rr==54270
+                    ||rr==171201
+                    ||rr==246771
+                    ||rr==24091){
+                holder.fop.setText("Lannisters");
+            }
+            else if (rr==52439
+                    ||rr==111640
+                    ||rr==167014
+                    ||rr==275735
+                    ||rr==195304
+                    ||rr==959
+                    ||rr==4375){
+                holder.fop.setText("Dothraki");
+            }
+            else if (rr==342
+                    ||rr==103470
+                    ||rr==1750
+                    ||rr==124666
+                    ||rr==541
+                    ||rr==823
+                    ||rr==22739){
+                holder.fop.setText("Brotherhood");
+            }
+            else if (rr==30325
+                    ||rr==253604
+                    ||rr==38110
+                    ||rr==294565
+                    ||rr==6721
+                    ||rr==32
+                    ||rr==260706){
+                holder.fop.setText("Valyrians");
+            }
+            else if (rr==133834
+                    ||rr==47810
+                    ||rr==40184
+                    ||rr==105706
+                    ||rr==102
+                    ||rr==6480
+                    ||rr==62002){
+                holder.fop.setText("Second Son");
+            }
+            else {
+                holder.fop.setText("N/A");
+            }
+
+
 
         } catch (Exception e) {
 

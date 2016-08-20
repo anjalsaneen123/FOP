@@ -79,7 +79,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
         android:text="GW Score     = "/>
 
     <TextView
@@ -90,10 +89,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
         android:text="12345"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/fop"
+        android:layout_below="@+id/date_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="FOP Team    = "/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/fop_team"
+        android:layout_toRightOf="@+id/fop"
+        android:layout_below="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="N/A"/>
     <View
-        android:layout_below="@id/date"
+        android:layout_below="@id/fop"
         android:layout_width="320dp"
         android:layout_centerHorizontal="true"
         android:layout_height="1px"

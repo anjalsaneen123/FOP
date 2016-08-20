@@ -252,8 +252,6 @@ public class Tml extends AppCompatActivity {
                 findgoal("50973","2475",s17,s18,t17,t18,a9);
                 findgoal("12066","49972",s19,s20,t19,t20,a10);
 
-
-
                 findgoal("102","2101",s21,s22,t21,t22,a11);
                 findgoal("1750","57414",s23,s24,t23,t24,a12);
 

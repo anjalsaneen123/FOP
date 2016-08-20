@@ -311,7 +311,12 @@ public class LeagueActivity extends AppCompatActivity{
 
                     player.setTotal_score(object.getString("total"));
 
+
+                    int rr=Integer.parseInt(object.getString("entry"));
+
                     new HttpAsyncTaskHit().execute("https://fantasy.premierleague.com/drf/entry/"+object.getString("entry")+"/event/"+current+"/picks");
+
+
 
                     PlayerList.add(player);
 
@@ -364,6 +369,8 @@ public class LeagueActivity extends AppCompatActivity{
 
                 current=jsonRootObject.getString("current-event");
                 Log.e("Current:",current);
+
+
 
                 new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page=1&ls-page=1");
 
