@@ -72,10 +72,6 @@ public class AdapterFixture extends ArrayAdapter<Fixtures> {
                 holder.t9 = (TextView) vi.findViewById(R.id.t9);
                 holder.t10 = (TextView) vi.findViewById(R.id.t10);
 
-
-
-
-
                 vi.setTag(holder);
             } else {
                 holder = (ViewHolder) vi.getTag();

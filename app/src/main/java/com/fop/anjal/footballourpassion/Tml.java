@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,9 +25,11 @@ import java.util.ArrayList;
 
 public class Tml extends AppCompatActivity {
     ArrayList<Players> PlayersList = new ArrayList<Players>();
+    ArrayList<HitData> Hits = new ArrayList<HitData>();
 
     String current;
     int avg;
+    ProgressBar spinner;
     TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,
                 t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t33,t34,t35,t36,t37,t38,t39,t40;
     TextView s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,
@@ -44,6 +47,7 @@ public class Tml extends AppCompatActivity {
         setContentView(R.layout.activity_tml);
 
         PlayersList =  (ArrayList<Players>)getIntent().getSerializableExtra("FILES_TO_SEND");
+        Hits = (ArrayList<HitData>)getIntent().getSerializableExtra("FILES_TO");
 
         scrollView = (ScrollView)findViewById(R.id.scrollView);
 
@@ -159,6 +163,9 @@ public class Tml extends AppCompatActivity {
 
         avg_textview = (TextView)findViewById(R.id.avg);
 
+        spinner = (ProgressBar)findViewById(R.id.progressBar1);
+        spinner.setVisibility(View.VISIBLE);
+
         new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/bootstrap-static");
 
     }
@@ -220,6 +227,7 @@ public class Tml extends AppCompatActivity {
                     if(current.equals("true")){
                         avg = Integer.parseInt(object.getString("average_entry_score"));
                         scrollView.setVisibility(View.VISIBLE);
+                        spinner.setVisibility(View.GONE);
                         avg_textview.setText("Overall Average: "+String.valueOf(avg));
                         break;
                     }
@@ -277,14 +285,15 @@ public class Tml extends AppCompatActivity {
         for(int i=0;i<PlayersList.size();i++)
         {
             if((PlayersList.get(i).getEntry()).equals(p1)){
-                n1.setText(((PlayersList.get(i).getPlayer_name()))+"   "+(PlayersList.get(i).getGw_score()));
-                sc1=Integer.parseInt(PlayersList.get(i).getGw_score());
+                sc1=Integer.parseInt(PlayersList.get(i).getGw_score())-(Integer.parseInt(Hits.get(i).getHit()));
+                n1.setText(PlayersList.get(i).getPlayer_name()+"  "+String.valueOf(sc1));
+                Log.e("Hit",String.valueOf(Integer.parseInt(Hits.get(i).getHit())));
             }
             if((PlayersList.get(i).getEntry()).equals(p2)){
-                n2.setText(((PlayersList.get(i).getPlayer_name()))+"   "+(PlayersList.get(i).getGw_score()));
-                sc2=Integer.parseInt(PlayersList.get(i).getGw_score());
+                sc2=Integer.parseInt(PlayersList.get(i).getGw_score())-(Integer.parseInt(Hits.get(i).getHit()));
+                n2.setText(PlayersList.get(i).getPlayer_name()+"  "+String.valueOf(sc2));
+                Log.e("Hit",String.valueOf(Integer.parseInt(Hits.get(i).getHit())));
             }
-
         }
         int avgg=avg+6;
         if(sc1>avgg){

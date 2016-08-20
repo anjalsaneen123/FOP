@@ -51,12 +51,14 @@ import com.fop.anjal.footballourpassion.Teams.Team9;
 public class LeagueActivity extends AppCompatActivity{
 
     ArrayList<Players> PlayerList = new ArrayList<Players>();
+    ArrayList<HitData> Hits = new ArrayList<HitData>();
     ImageView button;
     ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link,tml;
     RelativeLayout bg;
     int j=0,p=2;
     private ProgressBar spinner;
     Context context;
+    String current;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +83,9 @@ public class LeagueActivity extends AppCompatActivity{
         spinner.setVisibility(View.VISIBLE);
         // get reference to the views
 
+        new HttpAsyncTaskDynamic().execute("https://fantasy.premierleague.com/drf/bootstrap-dynamic");
 
         // call AsynTask to perform network operation on separate thread
-        new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page=1&ls-page=1");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +102,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team1.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
                 startActivity(intent);
             }
         });
@@ -109,7 +112,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team2.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
-
+                intent.putExtra("FILES_TO",Hits);
                 startActivity(intent);
             }
         });
@@ -119,6 +122,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team3.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -129,6 +133,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team4.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -139,6 +144,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team5.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -149,6 +155,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team6.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -159,6 +166,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team7.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -169,6 +177,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team8.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -179,6 +188,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team9.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -189,6 +199,7 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Team10.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
 
                 startActivity(intent);
             }
@@ -207,13 +218,14 @@ public class LeagueActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, Tml.class);
                 intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO",Hits);
                 startActivity(intent);
             }
         });
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fantasy.premierleague.com/a/leagues/standings/569/classic"));
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fop.maruthamon.com/FPLWeb/FOPLaunch.jsp"));
                 startActivity(myIntent);
             }
         });
@@ -299,6 +311,8 @@ public class LeagueActivity extends AppCompatActivity{
 
                     player.setTotal_score(object.getString("total"));
 
+                    new HttpAsyncTaskHit().execute("https://fantasy.premierleague.com/drf/entry/"+object.getString("entry")+"/event/"+current+"/picks");
+
                     PlayerList.add(player);
 
                 }
@@ -325,6 +339,64 @@ public class LeagueActivity extends AppCompatActivity{
                     tml.setVisibility(View.VISIBLE);
                     spinner.setVisibility(View.GONE);
                 }
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+                Log.d("LeagueActivity:",e.toString());
+            }
+        }
+    }
+
+    private class HttpAsyncTaskDynamic extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+            return GET(urls[0]);
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+
+//            Log.d("RESULT:",result);
+            try
+            {
+                JSONObject jsonRootObject = new JSONObject(result);
+
+                current=jsonRootObject.getString("current-event");
+                Log.e("Current:",current);
+
+                new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/leagues-classic-standings/569?phase=1&le-page=1&ls-page=1");
+
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+                Log.d("LeagueActivity:",e.toString());
+            }
+
+        }
+    }
+    private class HttpAsyncTaskHit extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+            return GET(urls[0]);
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+
+//            Log.d("RESULT:",result);
+            try
+            {
+                HitData hit = new HitData();
+
+                JSONObject jsonRootObject = new JSONObject(result);
+                JSONObject object  = jsonRootObject.getJSONObject("entry_history");
+
+                hit.setHit(object.getString("event_transfers_cost"));
+                Log.e("Cost:",object.getString("event_transfers_cost"));
+                Hits.add(hit);
+
             }
             catch (JSONException e)
             {
