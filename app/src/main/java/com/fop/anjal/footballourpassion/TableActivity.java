@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class TableActivity extends AppCompatActivity {
-    ArrayList<Players> PlayersList = new ArrayList<Players>();
+    ArrayList<Players> FullPlayersList = new ArrayList<Players>();
     TextView name;
     ListView listview;
 
@@ -24,13 +24,13 @@ public class TableActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.listview);
 
 
-        PlayersList =  (ArrayList<Players>)getIntent().getSerializableExtra("FILES_TO_SEND");
+        FullPlayersList =  (ArrayList<Players>)getIntent().getSerializableExtra("FILES_TO_SEND");
 
-//        name.setText(PlayersList.get(1).getPlayer_first_name());
+//        name.setText(FullPlayersList.get(1).getPlayer_first_name());
 
         AdapterPlayer Person;
 
-        Person= new AdapterPlayer (TableActivity.this, 0, PlayersList);
+        Person= new AdapterPlayer (TableActivity.this, 0, FullPlayersList);
         listview.setAdapter(Person);
     }
 }

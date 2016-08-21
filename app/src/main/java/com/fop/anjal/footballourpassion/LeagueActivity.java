@@ -50,8 +50,9 @@ import com.fop.anjal.footballourpassion.Teams.Team9;
 
 public class LeagueActivity extends AppCompatActivity{
 
-    ArrayList<Players> PlayerList = new ArrayList<Players>();
+    ArrayList<Players> FullPlayerList = new ArrayList<Players>();
     ArrayList<HitData> Hits = new ArrayList<HitData>();
+    ArrayList<Players> PlayerList = new ArrayList<Players>();
     ImageView button;
     ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link,tml;
     RelativeLayout bg;
@@ -91,7 +92,7 @@ public class LeagueActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LeagueActivity.this, TableActivity.class);
-                intent.putExtra("FILES_TO_SEND", PlayerList);
+                intent.putExtra("FILES_TO_SEND", FullPlayerList);
 
                 startActivity(intent);
             }
@@ -298,6 +299,8 @@ public class LeagueActivity extends AppCompatActivity{
                     JSONObject object = jsonResults.getJSONObject(i);
 
                     Players player = new Players();
+                    
+                    int rr=Integer.parseInt(object.getString("entry"));
 
                     player.setEntry_name(object.getString("entry_name"));
                     player.setId(object.getString("id"));
@@ -311,14 +314,95 @@ public class LeagueActivity extends AppCompatActivity{
 
                     player.setTotal_score(object.getString("total"));
 
-
-                    int rr=Integer.parseInt(object.getString("entry"));
-
-                    new HttpAsyncTaskHit().execute("https://fantasy.premierleague.com/drf/entry/"+object.getString("entry")+"/event/"+current+"/picks");
+                    FullPlayerList.add(player);
 
 
+                    int ss=Integer.parseInt(object.getString("entry"));
+                    if(ss==811
+                            || ss==76418
+                            || ss==65975
+                            || ss==202150
+                            || ss==5912
+                            || ss==10598
+                            || ss==49972
 
-                    PlayerList.add(player);
+                            || ss==218915
+                            || ss==108
+                            || ss==34815
+                            || ss==153210
+                            || ss==26487
+                            || ss==204558
+                            || ss==33905
+
+                            || ss==18848
+                            || ss==2475
+                            || ss==258027
+                            || ss==314710
+                            || ss==2101
+                            || ss==169616
+                            || ss==1488
+
+                            || ss==591
+                            || ss==50973
+                            || ss==28466
+                            || ss==77009
+                            || ss==27006
+                            || ss==24132
+                            || ss==21538
+
+                            || ss==59795
+                            || ss==166225
+                            || ss==7519
+                            || ss==57414
+                            || ss==4183
+                            || ss==12066
+                            || ss==8167
+
+                            || ss==779
+                            || ss==326
+                            || ss==140848
+                            || ss==54270
+                            || ss==171201
+                            || ss==246771
+                            || ss==24091
+
+                            || ss==52439
+                            || ss==111640
+                            || ss==167014
+                            || ss==275735
+                            || ss==195304
+                            || ss==959
+                            || ss==4375
+
+                            || ss==342
+                            || ss==103470
+                            || ss==1750
+                            || ss==124666
+                            || ss==541
+                            || ss==823
+                            || ss==22739
+
+                            || ss==30325
+                            || ss==253604
+                            || ss==38110
+                            || ss==294565
+                            || ss==6721
+                            || ss==32
+                            || ss==260706
+
+                            || ss==133834
+                            || ss==47810
+                            || ss==40184
+                            || ss==105706
+                            || ss==102
+                            || ss==6480
+                            || ss==62002)
+                    {
+                        Log.d(String.valueOf(i)+"to",player.getPlayer_name());
+                        PlayerList.add(player);
+                        new HttpAsyncTaskHit().execute("https://fantasy.premierleague.com/drf/entry/"+object.getString("entry")+"/event/"+current+"/picks");
+
+                    }
 
                 }
                 if((JSONnew_entries.getString("has_next")).equals("true")) {
