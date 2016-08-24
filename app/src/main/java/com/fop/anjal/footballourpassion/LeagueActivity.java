@@ -54,7 +54,7 @@ public class LeagueActivity extends AppCompatActivity{
     ArrayList<HitData> Hits = new ArrayList<HitData>();
     ArrayList<Players> PlayerList = new ArrayList<Players>();
     ImageView button;
-    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link,tml;
+    ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,fixture,link,tml,link2;
     RelativeLayout bg;
     int j=0,p=2;
     private ProgressBar spinner;
@@ -79,6 +79,7 @@ public class LeagueActivity extends AppCompatActivity{
         button10 = (ImageView) findViewById(R.id.button10);
         link = (ImageView) findViewById(R.id.link);
         tml = (ImageView) findViewById(R.id.tml);
+        link2 = (ImageView) findViewById(R.id.link2);
         fixture = (ImageView) findViewById(R.id.fixture);
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
         spinner.setVisibility(View.VISIBLE);
@@ -227,6 +228,13 @@ public class LeagueActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fop.maruthamon.com/FPLWeb/FOPLaunch.jsp"));
+                startActivity(myIntent);
+            }
+        });
+        link2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fantasy.premierleague.com/a/leagues/standings/569/classic"));
                 startActivity(myIntent);
             }
         });
