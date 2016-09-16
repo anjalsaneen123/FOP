@@ -493,6 +493,7 @@ public class LeagueActivity extends AppCompatActivity{
                 JSONObject object  = jsonRootObject.getJSONObject("entry_history");
 
                 hit.setHit(object.getString("event_transfers_cost"));
+                hit.setCurrent(current);
                 Log.e("Cost:",object.getString("event_transfers_cost"));
                 Hits.add(hit);
 

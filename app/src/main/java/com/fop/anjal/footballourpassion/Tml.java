@@ -1,5 +1,7 @@
 package com.fop.anjal.footballourpassion;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -286,11 +288,27 @@ public class Tml extends AppCompatActivity {
                 sc1=Integer.parseInt(PlayersList.get(i).getGw_score())-(Integer.parseInt(Hits.get(i).getHit()));
                 n1.setText(PlayersList.get(i).getPlayer_name()+"  "+String.valueOf(sc1));
                 Log.e("Hit",String.valueOf(Integer.parseInt(Hits.get(i).getHit())));
+                final String link= "http://fantasy.premierleague.com/a/team/"+PlayersList.get(i).getEntry()+"/event/"+Hits.get(i).getCurrent();
+                n1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                        startActivity(myIntent);
+                    }
+                });
             }
             if((PlayersList.get(i).getEntry()).equals(p2)){
                 sc2=Integer.parseInt(PlayersList.get(i).getGw_score())-(Integer.parseInt(Hits.get(i).getHit()));
                 n2.setText(PlayersList.get(i).getPlayer_name()+"  "+String.valueOf(sc2));
                 Log.e("Hit",String.valueOf(Integer.parseInt(Hits.get(i).getHit())));
+                final String link= "http://fantasy.premierleague.com/a/team/"+PlayersList.get(i).getEntry()+"/event/"+Hits.get(i).getCurrent();
+                n2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                        startActivity(myIntent);
+                    }
+                });
             }
         }
         int avgg=avg+6;
