@@ -6,26 +6,26 @@ import java.io.Serializable;
  * Created by anjal on 29-Jul-16.
  */
 public class Players implements Serializable {
-    String id,entry_name,player_first_name,player_last_name,entry,joined_time;
+    String id,entry_name,player_name,entry,gw_score,rank,total_score;
 
     public Players() {
 
     }
 
-    public String getJoined_time() {
-        return joined_time;
+    public String getId() {
+        return id;
     }
 
-    public void setJoined_time(String joined_time) {
-        this.joined_time = joined_time;
+    public String getTotal_score() {
+        return total_score;
     }
 
-    public String getEntry() {
-        return entry;
+    public void setTotal_score(String total_score) {
+        this.total_score = total_score;
     }
 
-    public void setEntry(String entry) {
-        this.entry = entry;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEntry_name() {
@@ -36,28 +36,35 @@ public class Players implements Serializable {
         this.entry_name = entry_name;
     }
 
-
-    public String getId() {
-        return id;
+    public String getPlayer_name() {
+        return player_name;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPlayer_name(String player_name) {
+        this.player_name = player_name;
     }
 
-    public String getPlayer_first_name() {
-        return player_first_name;
+    public String getEntry() {
+        return entry;
     }
 
-    public void setPlayer_first_name(String player_first_name) {
-        this.player_first_name = player_first_name;
+    public void setEntry(String entry) {
+        this.entry = entry;
     }
 
-    public String getPlayer_last_name() {
-        return player_last_name;
+    public String getGw_score() {
+        return gw_score;
     }
 
-    public void setPlayer_last_name(String player_last_name) {
-        this.player_last_name = player_last_name;
+    public void setGw_score(String gw_score) {
+        this.gw_score = gw_score;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 }

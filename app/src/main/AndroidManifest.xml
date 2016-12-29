@@ -11,14 +11,40 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".LeagueActivity">
+        <activity android:name=".LeagueActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TableActivity"></activity>
+        <activity android:name=".TableActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team4"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team5"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team6"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team7"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team8"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team9"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Teams.Team10"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FixtureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Tml"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

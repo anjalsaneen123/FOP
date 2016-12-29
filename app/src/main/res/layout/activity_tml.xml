@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@mipmap/tml1"
+    tools:context="com.fop.anjal.footballourpassion.Tml">
+
+    <TextView
+        android:id="@+id/avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Average: "
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:padding="6dp"
+        android:src="@drawable/ic_share_black_24dp"
+        android:layout_alignParentRight="true" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/avg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/sun"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo1"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunderland"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                        android:id="@+id/t1"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Anjal Saneen" />
+
+                        <TextView
+                        android:id="@+id/s1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/t1"
+                        android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hudman" />
+
+                        <TextView
+                            android:id="@+id/s2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t2"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt1"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/man"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo2"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manchester United"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t3"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hudman" />
+
+                        <TextView
+                            android:id="@+id/s4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t4"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt2"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/che"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo3"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chelsea"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t5"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hudman" />
+
+                        <TextView
+                            android:id="@+id/s6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t6"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt3"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/city"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo4"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manchester City"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t7"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t7"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hudman" />
+
+                        <TextView
+                            android:id="@+id/s8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t8"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt4"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ars"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo5"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arsenal"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t9"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t9"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t10"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hudman" />
+
+                        <TextView
+                            android:id="@+id/s10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t10"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt5"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt5"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_log6"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/tot"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_log6"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spurs"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t11"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t11"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t12"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t12"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt6"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt6"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo7"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/sou"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo7"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Southampton"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t13"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t13"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t14"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t14"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt7"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt7"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/lex"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo8"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leicester"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t15"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t15"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t16"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t16"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt8"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt8"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_log9"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/bur"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_log9"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Burnley"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t17"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t17"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t18"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t18"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt9"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt9"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo10"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/swe"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo10"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swansea"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t19"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t19"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t20"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t20"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt10"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt10"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/wba"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo11"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="West Brom"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t21"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t21"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t22"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t22"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt11"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt11"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo12"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/wes"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo12"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="West Ham"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t23"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t23"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t24"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t24"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt12"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt12"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo13"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/eve"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo13"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Everton"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t25"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t25"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t26"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t26"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt13"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt13"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo14"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/mid"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo14"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Middlesbrough"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t27"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t27"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t28"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t28"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt14"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt14"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo15"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/sto"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo15"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stoke"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t29"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t29"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t30"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t30"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt15"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt15"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo16"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/wat"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo16"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Watford"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t31"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t31"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t32"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t32"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt16"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt16"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo17"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/hull"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo17"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hull City"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t33"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t33"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t34"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t34"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt17"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt17"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo18"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/bou"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo18"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bournmouth"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t35"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t35"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t36"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t36"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt18"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt18"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo19"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/cry"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo19"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crystal Palace"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t37"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s37"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t37"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t38"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t38"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt19"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt19"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/tml_item">
+                <ImageView
+                    android:id="@+id/team_logo20"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/liv"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/team_logo20"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Liverpool"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t39"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s39"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t39"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/t40"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Anjal Saneen" />
+
+                        <TextView
+                            android:id="@+id/s40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/t40"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/ttt20"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/a20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ttt20"
+                            android:textStyle="bold"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"/>
+
+</RelativeLayout>
