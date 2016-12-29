@@ -3,10 +3,11 @@ package com.fop.anjal.footballourpassion;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class Tml extends AppCompatActivity {
     TextView a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20;
     TextView avg_textview;
     ScrollView scrollView;
+    ImageView share;
 
     int i;
 
@@ -166,10 +168,68 @@ public class Tml extends AppCompatActivity {
         avg_textview = (TextView)findViewById(R.id.avg);
 
         spinner = (ProgressBar)findViewById(R.id.progressBar1);
+        share = (ImageView) findViewById(R.id.share);
         spinner.setVisibility(View.VISIBLE);
 
         new HttpAsyncTask().execute("https://fantasy.premierleague.com/drf/bootstrap-static");
 
+        share.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                shareText();
+            }
+        });
+    }
+
+    public  void shareText(){
+        String shareBody = "*TML Results* \n"+ avg_textview.getText() + "\n \n"+
+        "*Sunderland*\n" +t1.getText()+ " : "+s1.getText() +" Goals\n"+t2.getText()+ " : "+s2.getText() +" Goals\n"+
+                "Total : " +a1.getText() + " Goals\n\n"+
+        "*Manchester United*\n" +t3.getText()+ " : "+s3.getText() +" Goals\n"+t4.getText()+ " : "+s4.getText() +" Goals\n"+
+                "Total : " +a2.getText() + " Goals \n \n"+
+        "*Chelsea*\n" +t5.getText()+ " : "+s5.getText() +" Goals\n"+t6.getText()+ " : "+s6.getText() +" Goals\n"+
+                "Total : " +a3.getText() + " Goals\n\n"+
+        "*Man City*\n" +t7.getText()+ " : "+s7.getText() +" Goals\n"+t8.getText()+ " : "+s8.getText() +" Goals\n"+
+                "Total : " +a4.getText() + " Goals\n\n"+
+        "*Arsenal*\n" +t9.getText()+ " : "+s9.getText() +" Goals\n"+t10.getText()+ " : "+s10.getText() +" Goals\n"+
+                "Total : " +a5.getText() + " Goals\n\n"+
+        "*Spurs*\n" +t11.getText()+ " : "+s11.getText() +" Goals\n"+t12.getText()+ " : "+s12.getText() +" Goals\n"+
+                "Total : " +a6.getText() + " Goals\n\n"+
+        "*Southampton*\n" +t13.getText()+ " : "+s13.getText() +" Goals\n"+t14.getText()+ " : "+s14.getText() +" Goals\n"+
+                "Total : " +a7.getText() + " Goals\n\n"+
+        "*Leicester*\n" +t15.getText()+ " : "+s15.getText() +" Goals\n"+t16.getText()+ " : "+s16.getText() +" Goals\n"+
+                "Total : " +a8.getText() + " Goals\n\n"+
+        "*Burnley*\n" +t17.getText()+ " : "+s17.getText() +" Goals\n"+t18.getText()+ " : "+s18.getText() +" Goals\n"+
+                "Total : " +a9.getText() + " Goals\n\n"+
+        "*Swansea*\n" +t19.getText()+ " : "+s19.getText() +" Goals\n"+t20.getText()+ " : "+s20.getText() +" Goals\n"+
+                "Total : " +a10.getText() + " Goals\n\n"+
+
+        "*West Brom*\n" +t21.getText()+ " : "+s21.getText() +" Goals\n"+t22.getText()+ " : "+s22.getText() +" Goals\n"+
+                "Total : " +a11.getText() + " Goals\n\n"+
+        "*West Ham*\n" +t23.getText()+ " : "+s23.getText() +" Goals\n"+t24.getText()+ " : "+s24.getText() +" Goals\n"+
+                "Total : " +a12.getText() + " Goals \n \n"+
+        "*Everton*\n" +t25.getText()+ " : "+s25.getText() +" Goals\n"+t26.getText()+ " : "+s26.getText() +" Goals\n"+
+                "Total : " +a13.getText() + " Goals\n\n"+
+        "*Middlesbrough*\n" +t27.getText()+ " : "+s27.getText() +" Goals\n"+t28.getText()+ " : "+s28.getText() +" Goals\n"+
+                "Total : " +a14.getText() + " Goals\n\n"+
+        "*Stoke*\n" +t29.getText()+ " : "+s29.getText() +" Goals\n"+t30.getText()+ " : "+s30.getText() +" Goals\n"+
+                "Total : " +a15.getText() + " Goals\n\n"+
+        "*Watford*\n" +t31.getText()+ " : "+s31.getText() +" Goals\n"+t32.getText()+ " : "+s32.getText() +" Goals\n"+
+                "Total : " +a16.getText() + " Goals\n\n"+
+        "*Hull City*\n" +t33.getText()+ " : "+s33.getText() +" Goals\n"+t34.getText()+ " : "+s34.getText() +" Goals\n"+
+                "Total : " +a17.getText() + " Goals\n\n"+
+        "*Bournmouth*\n" +t35.getText()+ " : "+s35.getText() +" Goals\n"+t36.getText()+ " : "+s36.getText() +" Goals\n"+
+                "Total : " +a18.getText() + " Goals\n\n"+
+        "*Crystal Palace*\n" +t37.getText()+ " : "+s37.getText() +" Goals\n"+t38.getText()+ " : "+s38.getText() +" Goals\n"+
+                "Total : " +a19.getText() + " Goals\n\n"+
+        "*Liverpool*\n" +t39.getText()+ " : "+s39.getText() +" Goals\n"+t40.getText()+ " : "+s40.getText() +" Goals\n"+
+                "Total : " +a20.getText() + " Goals\n\n";
+
+
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "TML"));
     }
     public static String GET(String url){
         InputStream inputStream = null;
@@ -229,6 +289,7 @@ public class Tml extends AppCompatActivity {
                     if(current.equals("true")){
                         avg = Integer.parseInt(object.getString("average_entry_score"));
                         scrollView.setVisibility(View.VISIBLE);
+                        share.setVisibility(View.VISIBLE);
                         spinner.setVisibility(View.GONE);
                         avg_textview.setText("Overall Average: "+String.valueOf(avg));
                         break;

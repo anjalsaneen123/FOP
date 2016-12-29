@@ -3,6 +3,7 @@ package com.fop.anjal.footballourpassion.Teams;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -339,10 +340,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -392,10 +397,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -446,10 +455,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -500,10 +513,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -554,10 +571,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -607,11 +628,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
-
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();
@@ -662,10 +686,14 @@ public class Team2 extends AppCompatActivity {
                         away.setVisibility(View.GONE);
                         border.setVisibility(View.GONE);
 
-                        title.setText(String.valueOf(title.getText())+"(H)");
+                        title.setText(String.valueOf(title.getText()+"(H)"));
+                        int temp = total_score;
                         total_score=total_score+(total_score-cap)/30;
-                        if((total_score-cap)%30 >= 15){
-                            total_score++;
+                        int fuck = (temp-cap) % 30;
+                        Log.e("ABCDE:",String.valueOf(fuck));
+                        if(fuck >= 15){
+                            total_score = total_score + 1;
+                            Log.e("ABCDE:","plusplus");
                         }
                         total.setText(String.valueOf(total_score));
                         Toast.makeText(getBaseContext(), "HA Added", Toast.LENGTH_SHORT).show();

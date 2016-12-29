@@ -85,7 +85,7 @@ public class AdapterPlayer extends ArrayAdapter<Players> {
                     ||rr==5912
                     ||rr==10598
                     ||rr==49972){
-                    holder.fop.setText("White wankers");
+                    holder.fop.setText("White Walkers");
             }
             else if (rr==218915
                     ||rr==108

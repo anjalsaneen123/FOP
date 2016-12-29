@@ -6,10 +6,12 @@ package com.fop.anjal.footballourpassion;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -49,10 +51,11 @@ public class AdapterFixture extends ArrayAdapter<Fixtures> {
 
     public static class ViewHolder {
         public TextView gw,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10;
+        public ImageView share;
 
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View vi = convertView;
         final ViewHolder holder;
         try {
@@ -71,6 +74,7 @@ public class AdapterFixture extends ArrayAdapter<Fixtures> {
                 holder.t8 = (TextView) vi.findViewById(R.id.t8);
                 holder.t9 = (TextView) vi.findViewById(R.id.t9);
                 holder.t10 = (TextView) vi.findViewById(R.id.t10);
+                holder.share = (ImageView) vi.findViewById(R.id.share);
 
                 vi.setTag(holder);
             } else {
@@ -91,6 +95,22 @@ public class AdapterFixture extends ArrayAdapter<Fixtures> {
             holder.t9.setText(lPerson.get(position).getT9());
             holder.t10.setText(lPerson.get(position).getT10());
 
+            holder.share.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String shareBody = "*"+lPerson.get(position).getGw()+ " Fixtures* \n \n" +
+                            lPerson.get(position).getT1() + "  _vs_  " +lPerson.get(position).getT2()+ "\n" +
+                            lPerson.get(position).getT3() + "  _vs_  " +lPerson.get(position).getT4()+ "\n" +
+                            lPerson.get(position).getT5() + "  _vs_  " +lPerson.get(position).getT6()+ "\n" +
+                            lPerson.get(position).getT7() + "  _vs_  " +lPerson.get(position).getT8()+ "\n" +
+                            lPerson.get(position).getT9() + "  _vs_  " +lPerson.get(position).getT10();
+
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Fixture");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    activity.startActivity(Intent.createChooser(sharingIntent, "Fixture"));
+                }
+            });
 
         } catch (Exception e) {
 
