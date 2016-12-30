@@ -2,8 +2,8 @@ package com.fop.anjal.footballourpassion.Teams;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fop.anjal.footballourpassion.HitData;
-import com.fop.anjal.footballourpassion.LeagueActivity;
 import com.fop.anjal.footballourpassion.Players;
 import com.fop.anjal.footballourpassion.R;
 
@@ -28,6 +27,7 @@ public class Team1 extends AppCompatActivity {
     Button home,away;
     RelativeLayout border;
     Float round;
+    int ccc=0;
 
     int total_score=0,ha=0,cap=0;
 
@@ -78,9 +78,30 @@ public class Team1 extends AppCompatActivity {
         bottom = (ImageView) findViewById(R.id.home);
         home = (Button) findViewById(R.id.button1);
         away = (Button) findViewById(R.id.button2);
-
         title=(TextView)findViewById(R.id.title);
         title.setText("WHITE WALKERS");
+
+        ImageView share = (ImageView) findViewById(R.id.share);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String shareBody = "*"+title.getText()+"*\n \n"+ name1.getText() +"   :"+score1.getText()+"\n"+
+                        name2.getText() +"   : "+score2.getText()+"\n"+
+                        name3.getText() +"   : "+score3.getText()+"\n"+
+                        name4.getText() +"   : "+score4.getText()+"\n"+
+                        name5.getText() +"   : "+score5.getText()+"\n"+
+                        name6.getText() +"   : "+score6.getText()+"\n"+
+                        name7.getText() +"   : "+score7.getText()+"\n"+
+                        "*Total*   : " + total.getText();
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "BFW"));
+            }
+        });
+
 
         for(int i=0;i<PlayersList.size();i++)
         {

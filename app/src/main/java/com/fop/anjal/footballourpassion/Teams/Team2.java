@@ -1,5 +1,6 @@
 package com.fop.anjal.footballourpassion.Teams;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -77,6 +78,27 @@ public class Team2 extends AppCompatActivity {
 
         title=(TextView)findViewById(R.id.title);
         title.setText("FACELESS MEN");
+
+        ImageView share = (ImageView) findViewById(R.id.share);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String shareBody = "*"+title.getText()+"*\n \n"+ name1.getText() +"   :"+score1.getText()+"\n"+
+                        name2.getText() +"   : "+score2.getText()+"\n"+
+                        name3.getText() +"   : "+score3.getText()+"\n"+
+                        name4.getText() +"   : "+score4.getText()+"\n"+
+                        name5.getText() +"   : "+score5.getText()+"\n"+
+                        name6.getText() +"   : "+score6.getText()+"\n"+
+                        name7.getText() +"   : "+score7.getText()+"\n"+
+                        "*Total*   : " + total.getText();
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "BFW"));
+            }
+        });
 
         for(int i=0;i<PlayersList.size();i++)
         {
